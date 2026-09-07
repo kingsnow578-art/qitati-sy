@@ -43,16 +43,16 @@ import { timeAgo } from "@/lib/format";
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "Ù‚Ø·Ø¹ØªÙŠ â€” Ø³ÙˆÙ‚ Ù‚Ø·Ø¹ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± ÙÙŠ Ø³ÙˆØ±ÙŠØ§" },
+      { title: "قطعتي â€” سوق قطع الكمبيوتر ÙÙŠ سوريا" },
       {
         name: "description",
         content:
-          "ØªØ³ÙˆÙ‘Ù‚ ÙƒØ±ÙˆØª Ø´Ø§Ø´Ø©ØŒ Ù…Ø¹Ø§Ù„Ø¬Ø§ØªØŒ Ø±Ø§Ù…Ø§ØªØŒ Ù‡Ø§Ø±Ø¯Ø§Øª Ùˆ SSD Ù…Ø³ØªØ¹Ù…Ù„Ø© ÙˆØ¬Ø¯ÙŠØ¯Ø© ÙÙŠ Ø¯Ù…Ø´Ù‚ ÙˆÙƒÙ„ Ø³ÙˆØ±ÙŠØ§ Ø¹Ù„Ù‰ Ù‚Ø·Ø¹ØªÙŠ.",
+          "تسوّق كروت شاشة، معالجات، رامات، هاردات و SSD مستعملة وجديدة ÙÙŠ دمشق وكل سوريا على قطعتي.",
       },
-      { property: "og:title", content: "Ù‚Ø·Ø¹ØªÙŠ â€” Ø³ÙˆÙ‚ Ù‚Ø·Ø¹ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± ÙÙŠ Ø³ÙˆØ±ÙŠØ§" },
+      { property: "og:title", content: "قطعتي â€” سوق قطع الكمبيوتر ÙÙŠ سوريا" },
       {
         property: "og:description",
-        content: "Ø¨ÙŠØ¹ ÙˆØ§Ø´ØªØ±Ù Ù‚Ø·Ø¹ Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø¨Ø«Ù‚Ø© ÙÙŠ Ø³ÙˆØ±ÙŠØ§. Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Ù…Ø¬Ø§Ù†ÙŠØ© ÙˆØµÙˆØ± Ø­Ù‚ÙŠÙ‚ÙŠØ©.",
+        content: "بيع ÙˆØ§Ø´ØªØ±Ù قطع الكمبيوتر بثقة ÙÙŠ سوريا. إعلانات مجانية وصور حقيقية.",
       },
     ],
   }),
@@ -134,7 +134,7 @@ const FeaturedStoreCard = memo(({ p }: { p: any }) => {
         {/* Sponsored Badge - Top Right as requested and consistent with Ads */}
         <div className="absolute top-5 right-6 z-20">
           <div className="bg-gradient-to-r from-amber-500 to-yellow-400 text-black text-[8px] font-black px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 uppercase tracking-[0.15em] border border-white/20 animate-fade-in">
-            <Sparkles className="size-3 fill-black/20 animate-pulse" /> Ù…Ù…ÙˆÙ„
+            <Sparkles className="size-3 fill-black/20 animate-pulse" /> ممول
           </div>
         </div>
 
@@ -153,7 +153,7 @@ const FeaturedStoreCard = memo(({ p }: { p: any }) => {
               <MapPin className="size-3 text-primary shadow-glow" /> {p.stores?.region}
             </span>
             <span className="flex items-center gap-2 drop-shadow-md">
-              <Store className="size-3 text-primary shadow-glow" /> Ù…ØªØ¬Ø± Ù…Ø¹ØªÙ…Ø¯
+              <Store className="size-3 text-primary shadow-glow" /> متجر معتمد
             </span>
           </div>
         </div>
@@ -191,7 +191,7 @@ const PromotedStoresCarousel = memo(({ stores, t }: { stores: any[]; t: any }) =
   return (
     <section className="mt-8 mb-10">
       <div className="px-4">
-        <SectionTitle icon={<Sparkles className="size-4 text-gold" />} title="Ù…ØªØ§Ø¬Ø± Ù…Ù…ÙŠØ²Ø©" />
+        <SectionTitle icon={<Sparkles className="size-4 text-gold" />} title="متاجر مميزة" />
       </div>
 
       <div className="overflow-hidden px-2 sm:px-4" ref={emblaRef}>
@@ -209,7 +209,7 @@ const PromotedStoresCarousel = memo(({ stores, t }: { stores: any[]; t: any }) =
                       <Store className="size-8 text-white animate-pulse" />
                     </div>
                     <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-2">
-                      Ø£Ù†Ø´Ø¦ Ù…ØªØ¬Ø±Ùƒ Ø§Ù„Ù…Ù…ÙˆÙ„!
+                      أنشئ متجرك الممول!
                     </h3>
                     <p className="text-[10px] text-white/90 font-black uppercase tracking-[0.2em]">
                       Join our network of elite merchants
@@ -239,13 +239,13 @@ const HomeHeader = memo(
           <div className="size-14 sm:size-18 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 animate-logo-entrance transition-transform hover:scale-105 duration-500">
             <img
               src={logo}
-              alt="Ù‚Ø·Ø¹ØªÙŠ"
+              alt="قطعتي"
               className="size-10 sm:size-12 object-contain shadow-lg"
               loading="eager"
             />
           </div>
           <div className="flex flex-col justify-center min-w-0 overflow-visible">
-            <h1 className="text-3xl sm:text-4xl font-black drop-shadow-2xl leading-none">Ù‚Ø·Ø¹ØªÙŠ</h1>
+            <h1 className="text-3xl sm:text-4xl font-black drop-shadow-2xl leading-none">قطعتي</h1>
             <p className="text-[8px] sm:text-[9px] font-bold text-primary uppercase tracking-[0.2em] opacity-80 mt-1 pl-0.5">
               Hardware Hub
             </p>
@@ -403,7 +403,7 @@ const FeaturedAdCard = memo(({ p }: { p: any }) => {
             </div>
           ) : (
             <div className="bg-gradient-to-r from-amber-500 to-yellow-400 text-black text-[8px] font-black px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2 uppercase tracking-[0.15em] border border-white/20 animate-fade-in">
-              <Sparkles className="size-3 fill-black/20 animate-pulse" /> Ù…Ù…ÙˆÙ„
+              <Sparkles className="size-3 fill-black/20 animate-pulse" /> ممول
             </div>
           )}
         </div>
@@ -511,7 +511,7 @@ const HorizontalCategorySection = memo(({
           search={{ category: slug }}
           className="press flex items-center gap-1 text-[10px] font-black text-primary uppercase tracking-widest bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-xl border border-primary/20 transition-colors"
         >
-          <span>Ø¹Ø±Ø¶ Ø§Ù„ÙƒÙ„</span>
+          <span>عرض الكل</span>
           <ChevronLeft className="size-3" />
         </Link>
       </div>
@@ -591,10 +591,10 @@ const LatestSection = memo(
         <div className="flex items-center justify-between mb-2">
           <SectionTitle
             icon={activeTab === 'sale' ? <Cpu className="size-4 text-primary" /> : <Package className="size-4 text-emerald-500" />}
-            title={activeTab === 'sale' ? t("latest_products") : "Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø´Ø±Ø§Ø¡ Ø§Ù„Ø£Ø®ÙŠØ±Ø©"}
+            title={activeTab === 'sale' ? t("latest_products") : "طلبات الشراء الأخيرة"}
           />
           <Link to={activeTab === 'sale' ? "/sell" : "/requests/new"} className="text-[10px] font-black text-primary uppercase tracking-widest bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20">
-            {activeTab === 'sale' ? "Ø£Ø¶Ù Ù‚Ø·Ø¹Ø©" : "Ø£Ø¶Ù Ø·Ù„Ø¨"}
+            {activeTab === 'sale' ? "أضف قطعة" : "أضف طلب"}
           </Link>
         </div>
 
@@ -641,7 +641,7 @@ const LatestSection = memo(
             <div className="rounded-[2rem] border border-dashed border-border bg-surface-2 p-12 text-center shadow-inner">
               <Package className="size-12 text-muted-foreground mx-auto mb-4 opacity-20" />
               <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">
-                Ù„Ø§ ØªÙˆØ¬Ø¯ Ù‚Ø·Ø¹ Ù…Ø¹Ø±ÙˆØ¶Ø© Ø­Ø§Ù„ÙŠØ§Ù‹
+                لا توجد قطع معروضة حالياً
               </p>
             </div>
           )
@@ -656,7 +656,7 @@ const LatestSection = memo(
             <div className="rounded-[2rem] border border-dashed border-border bg-surface-2 p-12 text-center shadow-inner">
               <Package className="size-12 text-muted-foreground mx-auto mb-4 opacity-20" />
               <p className="text-sm text-slate-500 font-bold uppercase tracking-widest">
-                Ù„Ø§ ØªÙˆØ¬Ø¯ Ø·Ù„Ø¨Ø§Øª Ø­Ø§Ù„ÙŠØ§Ù‹
+                لا توجد طلبات حالياً
               </p>
             </div>
           )
@@ -677,7 +677,7 @@ const RequestCard = memo(function RequestCard({
 
   const displayPrice = req.max_price
     ? `${req.max_price} $`
-    : "Ø­Ø³Ø¨ Ø§Ù„Ø§ØªÙØ§Ù‚";
+    : "حسب Ø§Ù„Ø§ØªÙØ§Ù‚";
 
   const handleCardClick = () => {
     navigate({ to: "/requests/$id", params: { id: req.id } });
@@ -709,11 +709,11 @@ const RequestCard = memo(function RequestCard({
         {/* Request Badge */}
         <div className="absolute top-3 left-3 z-10 pointer-events-none flex flex-col gap-2">
           <div className="bg-emerald-500 text-white text-[8px] font-black px-2 py-1 rounded-lg uppercase tracking-wider shadow-lg border border-white/20">
-            Ø·Ù„Ø¨ Ø´Ø±Ø§Ø¡
+            طلب شراء
           </div>
           {req.item_condition && (
             <div className="bg-black/40 border border-white/10 rounded-lg px-2 py-1 text-[7px] font-black text-white/80 uppercase">
-              {req.item_condition === 'new' ? 'Ø¬Ø¯ÙŠØ¯Ø©' : 'Ù…Ø³ØªØ¹Ù…Ù„Ø©'}
+              {req.item_condition === 'new' ? 'جديدة' : 'مستعملة'}
             </div>
           )}
         </div>
@@ -891,7 +891,7 @@ function HomePage() {
                 activeTab === 'sale' ? "text-white" : "text-slate-500"
               )}
             >
-              Ù‚Ø·Ø¹ Ù„Ù„Ø¨ÙŠØ¹
+              قطع للبيع
             </button>
             <button
               onClick={() => setActiveTab('buy')}
@@ -900,7 +900,7 @@ function HomePage() {
                 activeTab === 'buy' ? "text-white" : "text-slate-500"
               )}
             >
-              Ø·Ù„Ø¨Ø§Øª Ø´Ø±Ø§Ø¡
+              طلبات شراء
             </button>
 
             {/* Animated Slider Background */}
@@ -933,7 +933,7 @@ function HomePage() {
                   <Sparkles className="size-8 text-white animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-2">
-                  Ø±ÙˆÙ‘Ø¬ Ù„Ù…Ù†ØªØ¬Ùƒ Ù‡Ù†Ø§!
+                  روّج لمنتجك هنا!
                 </h3>
                 <p className="text-[10px] text-white/90 font-black uppercase tracking-[0.2em]">
                   Boost Your Sales Instantly
