@@ -11,10 +11,23 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/app'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as MessagesRouteImport } from './routes/messages'
+import { Route as MyStoreRouteImport } from './routes/my-store'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReservationsRouteImport } from './routes/reservations'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as SellRouteImport } from './routes/sell'
 import { Route as StoresRouteImport } from './routes/stores'
+import { Route as WelcomeRouteImport } from './routes/welcome'
+import { Route as ChatConversationIdRouteImport } from './routes/chat.$conversationId'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
+import { Route as RequestsIdRouteImport } from './routes/requests.$id'
+import { Route as RequestsNewRouteImport } from './routes/requests.new'
+import { Route as SellerIdRouteImport } from './routes/seller.$id'
 import { Route as StoreIdRouteImport } from './routes/store.$id'
+import { Route as ProductIdEditRouteImport } from './routes/product.$id_.edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -26,9 +39,44 @@ const AppRoute = AppRouteImport.update({
   path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MessagesRoute = MessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyStoreRoute = MyStoreRouteImport.update({
+  id: '/my-store',
+  path: '/my-store',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservationsRoute = ReservationsRouteImport.update({
+  id: '/reservations',
+  path: '/reservations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SellRoute = SellRouteImport.update({
+  id: '/sell',
+  path: '/sell',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StoresRoute = StoresRouteImport.update({
@@ -36,9 +84,34 @@ const StoresRoute = StoresRouteImport.update({
   path: '/stores',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WelcomeRoute = WelcomeRouteImport.update({
+  id: '/welcome',
+  path: '/welcome',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChatConversationIdRoute = ChatConversationIdRouteImport.update({
+  id: '/chat/$conversationId',
+  path: '/chat/$conversationId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductIdRoute = ProductIdRouteImport.update({
   id: '/product/$id',
   path: '/product/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsIdRoute = RequestsIdRouteImport.update({
+  id: '/requests/$id',
+  path: '/requests/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestsNewRoute = RequestsNewRouteImport.update({
+  id: '/requests/new',
+  path: '/requests/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SellerIdRoute = SellerIdRouteImport.update({
+  id: '/seller/$id',
+  path: '/seller/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StoreIdRoute = StoreIdRouteImport.update({
@@ -46,55 +119,162 @@ const StoreIdRoute = StoreIdRouteImport.update({
   path: '/store/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductIdEditRoute = ProductIdEditRouteImport.update({
+  id: '/product/$id_/edit',
+  path: '/product/$id/edit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRoute
+  '/auth': typeof AuthRoute
+  '/messages': typeof MessagesRoute
+  '/my-store': typeof MyStoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/reservations': typeof ReservationsRoute
   '/search': typeof SearchRoute
+  '/sell': typeof SellRoute
   '/stores': typeof StoresRoute
+  '/welcome': typeof WelcomeRoute
+  '/chat/$conversationId': typeof ChatConversationIdRoute
   '/product/$id': typeof ProductIdRoute
+  '/requests/$id': typeof RequestsIdRoute
+  '/requests/new': typeof RequestsNewRoute
+  '/seller/$id': typeof SellerIdRoute
   '/store/$id': typeof StoreIdRoute
+  '/product/$id/edit': typeof ProductIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/app': typeof AppRoute
+  '/auth': typeof AuthRoute
+  '/messages': typeof MessagesRoute
+  '/my-store': typeof MyStoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/reservations': typeof ReservationsRoute
   '/search': typeof SearchRoute
+  '/sell': typeof SellRoute
   '/stores': typeof StoresRoute
+  '/welcome': typeof WelcomeRoute
+  '/chat/$conversationId': typeof ChatConversationIdRoute
   '/product/$id': typeof ProductIdRoute
+  '/requests/$id': typeof RequestsIdRoute
+  '/requests/new': typeof RequestsNewRoute
+  '/seller/$id': typeof SellerIdRoute
   '/store/$id': typeof StoreIdRoute
+  '/product/$id/edit': typeof ProductIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRoute
+  '/auth': typeof AuthRoute
+  '/messages': typeof MessagesRoute
+  '/my-store': typeof MyStoreRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/reservations': typeof ReservationsRoute
   '/search': typeof SearchRoute
+  '/sell': typeof SellRoute
   '/stores': typeof StoresRoute
+  '/welcome': typeof WelcomeRoute
+  '/chat/$conversationId': typeof ChatConversationIdRoute
   '/product/$id': typeof ProductIdRoute
+  '/requests/$id': typeof RequestsIdRoute
+  '/requests/new': typeof RequestsNewRoute
+  '/seller/$id': typeof SellerIdRoute
   '/store/$id': typeof StoreIdRoute
+  '/product/$id_/edit': typeof ProductIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/app' | '/search' | '/stores' | '/product/$id' | '/store/$id'
+    | '/'
+    | '/app'
+    | '/auth'
+    | '/messages'
+    | '/my-store'
+    | '/notifications'
+    | '/profile'
+    | '/reservations'
+    | '/search'
+    | '/sell'
+    | '/stores'
+    | '/welcome'
+    | '/chat/$conversationId'
+    | '/product/$id'
+    | '/requests/$id'
+    | '/requests/new'
+    | '/seller/$id'
+    | '/store/$id'
+    | '/product/$id/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app' | '/search' | '/stores' | '/product/$id' | '/store/$id'
+  to:
+    | '/'
+    | '/app'
+    | '/auth'
+    | '/messages'
+    | '/my-store'
+    | '/notifications'
+    | '/profile'
+    | '/reservations'
+    | '/search'
+    | '/sell'
+    | '/stores'
+    | '/welcome'
+    | '/chat/$conversationId'
+    | '/product/$id'
+    | '/requests/$id'
+    | '/requests/new'
+    | '/seller/$id'
+    | '/store/$id'
+    | '/product/$id/edit'
   id:
     | '__root__'
     | '/'
     | '/app'
+    | '/auth'
+    | '/messages'
+    | '/my-store'
+    | '/notifications'
+    | '/profile'
+    | '/reservations'
     | '/search'
+    | '/sell'
     | '/stores'
+    | '/welcome'
+    | '/chat/$conversationId'
     | '/product/$id'
+    | '/requests/$id'
+    | '/requests/new'
+    | '/seller/$id'
     | '/store/$id'
+    | '/product/$id_/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRoute
+  AuthRoute: typeof AuthRoute
+  MessagesRoute: typeof MessagesRoute
+  MyStoreRoute: typeof MyStoreRoute
+  NotificationsRoute: typeof NotificationsRoute
+  ProfileRoute: typeof ProfileRoute
+  ReservationsRoute: typeof ReservationsRoute
   SearchRoute: typeof SearchRoute
+  SellRoute: typeof SellRoute
   StoresRoute: typeof StoresRoute
+  WelcomeRoute: typeof WelcomeRoute
+  ChatConversationIdRoute: typeof ChatConversationIdRoute
   ProductIdRoute: typeof ProductIdRoute
+  RequestsIdRoute: typeof RequestsIdRoute
+  RequestsNewRoute: typeof RequestsNewRoute
+  SellerIdRoute: typeof SellerIdRoute
   StoreIdRoute: typeof StoreIdRoute
+  ProductIdEditRoute: typeof ProductIdEditRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -113,11 +293,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/messages': {
+      id: '/messages'
+      path: '/messages'
+      fullPath: '/messages'
+      preLoaderRoute: typeof MessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-store': {
+      id: '/my-store'
+      path: '/my-store'
+      fullPath: '/my-store'
+      preLoaderRoute: typeof MyStoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reservations': {
+      id: '/reservations'
+      path: '/reservations'
+      fullPath: '/reservations'
+      preLoaderRoute: typeof ReservationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
       fullPath: '/search'
       preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sell': {
+      id: '/sell'
+      path: '/sell'
+      fullPath: '/sell'
+      preLoaderRoute: typeof SellRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/stores': {
@@ -127,11 +356,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StoresRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/welcome': {
+      id: '/welcome'
+      path: '/welcome'
+      fullPath: '/welcome'
+      preLoaderRoute: typeof WelcomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chat/$conversationId': {
+      id: '/chat/$conversationId'
+      path: '/chat/$conversationId'
+      fullPath: '/chat/$conversationId'
+      preLoaderRoute: typeof ChatConversationIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/product/$id': {
       id: '/product/$id'
       path: '/product/$id'
       fullPath: '/product/$id'
       preLoaderRoute: typeof ProductIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests/$id': {
+      id: '/requests/$id'
+      path: '/requests/$id'
+      fullPath: '/requests/$id'
+      preLoaderRoute: typeof RequestsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requests/new': {
+      id: '/requests/new'
+      path: '/requests/new'
+      fullPath: '/requests/new'
+      preLoaderRoute: typeof RequestsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seller/$id': {
+      id: '/seller/$id'
+      path: '/seller/$id'
+      fullPath: '/seller/$id'
+      preLoaderRoute: typeof SellerIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/store/$id': {
@@ -141,16 +405,36 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StoreIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/product/$id_/edit': {
+      id: '/product/$id_/edit'
+      path: '/product/$id/edit'
+      fullPath: '/product/$id/edit'
+      preLoaderRoute: typeof ProductIdEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRoute,
+  AuthRoute: AuthRoute,
+  MessagesRoute: MessagesRoute,
+  MyStoreRoute: MyStoreRoute,
+  NotificationsRoute: NotificationsRoute,
+  ProfileRoute: ProfileRoute,
+  ReservationsRoute: ReservationsRoute,
   SearchRoute: SearchRoute,
+  SellRoute: SellRoute,
   StoresRoute: StoresRoute,
+  WelcomeRoute: WelcomeRoute,
+  ChatConversationIdRoute: ChatConversationIdRoute,
   ProductIdRoute: ProductIdRoute,
+  RequestsIdRoute: RequestsIdRoute,
+  RequestsNewRoute: RequestsNewRoute,
+  SellerIdRoute: SellerIdRoute,
   StoreIdRoute: StoreIdRoute,
+  ProductIdEditRoute: ProductIdEditRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
