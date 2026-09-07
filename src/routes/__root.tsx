@@ -6,10 +6,16 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useRouterState,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { isIOSDevice } from "../lib/device";
+import { AuthProvider } from "../lib/auth";
+import { LanguageProvider } from "../context/LanguageContext";
+import { AppLoadingProvider } from "../context/AppLoadingContext";
+import { BottomNav } from "../components/BottomNav";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -122,11 +128,41 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname !== "/" || !isIOSDevice()) {
+      return;
+    }
+
+    setIsRedirecting(true);
+    void router.navigate({ to: "/app", replace: true });
+  }, [router]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <AuthProvider>
+        <LanguageProvider>
+          <AppLoadingProvider>
+            {isRedirecting ? null : <WebAppSurface />}
+          </AppLoadingProvider>
+        </LanguageProvider>
+      </AuthProvider>
     </QueryClientProvider>
+  );
+}
+
+function WebAppSurface() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const isAppRoute = ["/app", "/stores", "/store/", "/product/", "/search"].some((route) =>
+    pathname === route || pathname.startsWith(route),
+  );
+
+  return (
+    <>
+      <Outlet />
+      {isAppRoute && <BottomNav />}
+    </>
   );
 }
