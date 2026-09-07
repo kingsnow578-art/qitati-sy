@@ -52,7 +52,7 @@ export const Route = createFileRoute("/app")({
       { property: "og:title", content: "قطعتي — سوق قطع الكمبيوتر في سوريا" },
       {
         property: "og:description",
-        content: "بيع واشتري قطع الكمبيوتر بثقة في سوريا. إعلانات مجانية وصور حقيقية.",
+        content: "بيع واشتري قطع الكمبيوتر بثقة في سوريا. إعلانات مجانية وصور حقيقية.",
       },
     ],
   }),
