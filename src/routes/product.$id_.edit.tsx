@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ComingSoon } from "@/components/ComingSoon";
 
-export const Route = createFileRoute("/product/$id_/edit")({
+export const Route = createFileRoute("/product/$id/edit")({
   head: () => ({
     meta: [
       { title: "تعديل المنتج — قطّعتي" },
