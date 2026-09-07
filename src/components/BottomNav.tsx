@@ -176,7 +176,7 @@ export function BottomNav() {
         <div className="mx-auto flex max-w-md items-stretch justify-between px-2 pt-2 h-16 relative">
           {items.map((item) => {
             const { id, to, label, Icon } = item;
-            const active = to === "/" ? pathname === "/" : to && pathname.startsWith(to);
+            const active = to === "/app" ? pathname === "/app" : Boolean(to) && pathname.startsWith(to);
             const isAddButton = id === "add";
 
             return (

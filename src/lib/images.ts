@@ -97,13 +97,13 @@ export async function getImageUrl(
     try {
       // Supabase supports image transformations in createSignedUrl for Pro plans.
       // We'll pass them in the options object.
-      const { data, error } = await supabase.storage.from(bucket).createSignedUrl(path, URL_EXPIRY, {
-        transform: options.width ? {
+      const { data, error } = await supabase.storage.from(bucket).createSignedUrl(path, URL_EXPIRY, options.width ? {
+        transform: {
           width: options.width,
           quality: options.quality || 80,
-          resize: 'cover',
-        } : undefined
-      });
+          resize: 'cover' as const,
+        },
+      } : {});
 
       if (error) throw error;
 

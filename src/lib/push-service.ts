@@ -32,6 +32,7 @@ export const PushService = {
     } catch (error: any) {
       console.error("[PushService] Fatal Error:", error);
       toast.error(`Push Error: ${error.message}`);
+      return [];
     }
   },
 
