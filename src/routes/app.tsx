@@ -43,16 +43,16 @@ import { timeAgo } from "@/lib/format";
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "قطعتي — سوق قطع الكمبيوتر ÙÙŠ سوريا" },
+      { title: "قطعتي — سوق قطع الكمبيوتر في سوريا" },
       {
         name: "description",
         content:
-          "تسوّق كروت شاشة، معالجات، رامات، هاردات و SSD مستعملة وجديدة ÙÙŠ دمشق وكل سوريا على قطعتي.",
+          "تسوّق كروت شاشة، معالجات، رامات، هاردات و SSD مستعملة وجديدة في دمشق وكل سوريا على قطعتي.",
       },
-      { property: "og:title", content: "قطعتي — سوق قطع الكمبيوتر ÙÙŠ سوريا" },
+      { property: "og:title", content: "قطعتي — سوق قطع الكمبيوتر في سوريا" },
       {
         property: "og:description",
-        content: "بيع واشتري قطع الكمبيوتر بثقة ÙÙŠ سوريا. إعلانات مجانية وصور حقيقية.",
+        content: "بيع واشتري قطع الكمبيوتر بثقة في سوريا. إعلانات مجانية وصور حقيقية.",
       },
     ],
   }),
@@ -677,7 +677,7 @@ const RequestCard = memo(function RequestCard({
 
   const displayPrice = req.max_price
     ? `${req.max_price} $`
-    : "حسب Ø§Ù„Ø§ØªÙØ§Ù‚";
+    : "حسب الاتفاق";
 
   const handleCardClick = () => {
     navigate({ to: "/requests/$id", params: { id: req.id } });
