@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { PushNotifications, type Token as CapToken, type PushNotificationSchema, type ActionPerformed } from "@capacitor/push-notifications";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 import { useNavigate } from "@tanstack/react-router";

@@ -43,7 +43,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { CONDITION_LABEL, categoryName } from "@/lib/constants";
 import { formatPrice, timeAgo } from "@/lib/format";
 import { fetchProduct } from "@/lib/products";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 import { useAuth } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 import { ensureOnline } from "@/lib/offline";

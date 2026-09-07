@@ -29,7 +29,7 @@ import { CATEGORIES, categoryName } from "@/lib/constants";
 import { fetchProducts, fetchSponsored, fetchAnnouncements, fetchPromoted } from "@/lib/products";
 import { ProductCard, ProductCardSkeleton } from "@/components/ProductCard";
 import { StorageImage } from "@/components/StorageImage";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 import { useAuth } from "@/lib/auth";
 import { useLanguage } from "@/context/LanguageContext";
 import { formatPrice } from "@/lib/format";

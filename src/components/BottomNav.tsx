@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { AddActionMenu } from "./AddActionMenu";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuth } from "@/lib/auth";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 
 export function BottomNav() {
   const { t } = useLanguage();
