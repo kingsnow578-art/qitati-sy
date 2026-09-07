@@ -42,7 +42,7 @@ export function StorageImage({
       return;
     }
 
-    void getImageUrl(path, bucket as ImageBucket, { width, quality }).then((next) => {
+    void getImageUrl(path, bucket as ImageBucket, { ...(width ? { width } : {}), ...(quality ? { quality } : {}) }).then((next) => {
       if (!active) return;
       if (next) setUrl(next);
       else setFailed(true);

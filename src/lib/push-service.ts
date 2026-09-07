@@ -1,4 +1,4 @@
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 import { toast } from "sonner";
 
 export const PushService = {
@@ -32,6 +32,7 @@ export const PushService = {
     } catch (error: any) {
       console.error("[PushService] Fatal Error:", error);
       toast.error(`Push Error: ${error.message}`);
+      return [];
     }
   },
 

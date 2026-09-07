@@ -1,4 +1,4 @@
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 
 export async function reportAppError(error: Error | any, context?: any) {
   try {

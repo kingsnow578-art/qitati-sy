@@ -1,4 +1,4 @@
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/db";
 import type { ProductCardData } from "@/components/ProductCard";
 
 const LIST_COLUMNS =
