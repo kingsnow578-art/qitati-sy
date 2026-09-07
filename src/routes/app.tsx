@@ -43,13 +43,13 @@ import { timeAgo } from "@/lib/format";
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "قطعتي â€” سوق قطع الكمبيوتر ÙÙŠ سوريا" },
+      { title: "قطعتي — سوق قطع الكمبيوتر ÙÙŠ سوريا" },
       {
         name: "description",
         content:
           "تسوّق كروت شاشة، معالجات، رامات، هاردات و SSD مستعملة وجديدة ÙÙŠ دمشق وكل سوريا على قطعتي.",
       },
-      { property: "og:title", content: "قطعتي â€” سوق قطع الكمبيوتر ÙÙŠ سوريا" },
+      { property: "og:title", content: "قطعتي — سوق قطع الكمبيوتر ÙÙŠ سوريا" },
       {
         property: "og:description",
         content: "بيع ÙˆØ§Ø´ØªØ±Ù قطع الكمبيوتر بثقة ÙÙŠ سوريا. إعلانات مجانية وصور حقيقية.",
